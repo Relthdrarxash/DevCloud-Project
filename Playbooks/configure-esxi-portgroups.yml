@@ -1,0 +1,53 @@
+---
+- name: Configure vSwitches and Port Groups
+  hosts: esxi
+  gather_facts: false
+  vars:
+    esxi_username: "root"
+    esxi_password: "LPLannion1!"
+  tasks:
+  - name: Create vSwitch1
+    vmware_vswitch:
+      hostname: "{{ inventory_hostname }}"
+      username: "{{ esxi_username }}"
+      password: "{{ esxi_password }}"
+      vswitch_name: "vSwitch1"
+      num_ports: "128"
+      state: "present"
+    delegate_to: localhost
+  - name: Configure vSwitch Port Groups
+    vmware_portgroup:
+      hostname: "{{ inventory_hostname }}"
+      username: "{{ esxi_username }}"
+      password: "{{ esxi_password }}"
+      vswitch: "vSwitch1"
+      portgroups:
+        - name: "Serveurs"
+          vlan: "10"
+          vlan_type: "access"
+        - name: "Ordis_Persos"
+          vlan: "20"
+          vlan_type: "access"
+        - name: "Bornes"
+          vlan: "30"
+          vlan_type: "access"
+        - name: "Impriantes"
+          vlan: "40"
+          vlan_type: "access"
+        - name: "TV"
+          vlan: "60"
+          vlan_type: "access"
+        - name: "Reu1"
+          vlan: "70"
+          vlan_type: "access"
+        - name: "Reu2"
+          vlan: "80"
+          vlan_type: "access"
+        - name: "Poly"
+          vlan: "90"
+          vlan_type: "access"
+        - name: "AD"
+          vlan: "240"
+          vlan_type: "access"
+      state: "present"
+    delegate_to: localhost

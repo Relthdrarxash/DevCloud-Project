@@ -1,0 +1,20 @@
+---
+- name: Configure ESXi HA
+  hosts: esxi
+  gather_facts: false
+  vars:
+    esxi_username: "root"
+    esxi_password: "LPLannion1!"
+  tasks:
+  - name: Enable ESXi HA
+    vmware_host_ha:
+      hostname: "{{ inventory_hostname }}"
+      username: "{{ esxi_username }}"
+      password: "{{ esxi_password }}"
+      ha:
+        enable: true
+        admission_control_policy: "enabled"
+        failover_level: 2
+      datacenter: "DatacenterSPA"
+      cluster: "SPA24"
+    delegate_to: localhost

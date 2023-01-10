@@ -1,0 +1,39 @@
+---
+- name: Deploy and Configure VM PFsense
+  hosts: localhost
+  gather_facts: false
+  vars:
+    ovf: "/path/to/vm.ovf"
+    vcenter_username: "administrator@vsphere.local"
+    vcenter_password: "LPLannion1!"
+  tasks:
+  - name: Deploy VM from OVF
+    vmware_deploy_ovf:
+      hostname: "172.16.7.100" 
+      username: "{{ vcenter_username }}"
+      password: "{{ vcenter_password }}"
+      ovf: "{{ ovf }}"
+      datacenter: "dc1"
+      cluster: "cluster1"
+      resource_pool: "Resources"
+      name: "vm1"
+      power_on: true
+      wait: true
+  - name: Configure VM Network Settings
+    vmware_guest_network:
+      hostname: "172.16.7.100"
+      username: "{{ vcenter_username }}"
+      password: "{{ vcenter_password }}"
+      name: "vm1"
+      networks:
+        - name: "VM Network"
+          mac: "00:50:56:00:00:01"
+          ip: "192.168.1.100"
+          netmask: "255.255.255.0"
+          gateway: "192.168.1.1"
+          domain: "example.com"
+          dns_servers:
+            - "8.8.8.8"
+            - "8.8.4.4"
+          state: "present"
+    delegate_to: localhost
