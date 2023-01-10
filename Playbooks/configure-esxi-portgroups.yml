@@ -11,9 +11,10 @@
       hostname: "{{ inventory_hostname }}"
       username: "{{ esxi_username }}"
       password: "{{ esxi_password }}"
-      vswitch_name: "vSwitch1"
-      num_ports: "128"
+      switch: "vSwitch1"
+      nics: vmnic0
       state: "present"
+      validate_certs: false
     delegate_to: localhost
   - name: Configure vSwitch Port Groups
     vmware_portgroup:
