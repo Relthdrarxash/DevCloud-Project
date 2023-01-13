@@ -1,13 +1,13 @@
-<mxfile host="app.diagrams.net" modified="2023-01-13T09:21:14.100Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="H0A7tsrdSPwX5WWDhPKA" version="20.8.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-13T09:25:51.884Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="14zZf7s0TXFDrmdIUnko" version="20.8.5" type="github">
   <diagram name="Page-1" id="c37626ed-c26b-45fb-9056-f9ebc6bb27b6">
-    <mxGraphModel dx="2247" dy="640" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2609" dy="842" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="S-VgMTXi0rojGaED3WKQ-2" value="Réseau Salle I14" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;comic=0;strokeWidth=1;fontFamily=Verdana;fontSize=14;fillColor=#f5f5f5;strokeColor=none;verticalAlign=bottom;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="-621" y="390" width="1240" height="310" as="geometry" />
+        <mxCell id="S-VgMTXi0rojGaED3WKQ-2" value="Réseaux Virtuels" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;comic=0;strokeWidth=1;fontFamily=Verdana;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;verticalAlign=bottom;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-621" y="390" width="1240" height="300" as="geometry" />
         </mxCell>
-        <mxCell id="1c7a67bf8fd3230f-83" value="Réseau Salle I14" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;comic=0;strokeWidth=1;fontFamily=Verdana;fontSize=14;fillColor=#f5f5f5;strokeColor=none;verticalAlign=top;fontStyle=1" parent="1" vertex="1">
+        <mxCell id="1c7a67bf8fd3230f-83" value="Réseau Salle I14" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;comic=0;strokeWidth=1;fontFamily=Verdana;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="-621" y="120" width="1240" height="260" as="geometry" />
         </mxCell>
         <mxCell id="vLjDbiqeGYyuWvh9xT9g-1" value="172.16.0.1" style="shape=mxgraph.cisco.routers.router;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;" parent="1" vertex="1">
@@ -48,6 +48,12 @@
         </mxCell>
         <mxCell id="vLjDbiqeGYyuWvh9xT9g-18" value="vmnic1&lt;br&gt;172.16.7.11" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry y="330" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S-VgMTXi0rojGaED3WKQ-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="S-VgMTXi0rojGaED3WKQ-2" target="S-VgMTXi0rojGaED3WKQ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S-VgMTXi0rojGaED3WKQ-4" value="" style="shape=mxgraph.cisco.switches.workgroup_switch;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-43.5" y="510" width="81.5" height="35" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
