@@ -28,12 +28,5 @@
       networks:
         - name: "VM Network"
           mac: "00:50:56:00:00:01"
-          ip: "192.168.1.100"
-          netmask: "255.255.255.0"
-          gateway: "192.168.1.1"
-          domain: "example.com"
-          dns_servers:
-            - "8.8.8.8"
-            - "8.8.4.4"
           state: "present"
     delegate_to: localhost
